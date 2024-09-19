@@ -1,4 +1,4 @@
-@import "@/assets/styles/global";
+@import "global";
 
 .home {
     display: flex;
@@ -22,24 +22,40 @@
     margin-top: 0.5rem;
 }
 
-.carousel {
+.carousel-container {
     margin-top: 2rem;
-    font-size: 1.5rem;
-    color: #333;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    height: 2rem;
 }
 
 .carousel-item {
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: bold;
     color: #3498db;
-    animation: fadeIn 1s ease-in-out;
+    white-space: nowrap;
+    /* Ajout de transition sur transform et opacity */
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Sortie de l'élément avec un effet de glissement vers la gauche et disparition */
+.carousel-leave-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-out, transform 0.3s ease;
+}
+
+/* Entrée de l'élément avec un effet de glissement de la droite avec opacité augmentant */
+.carousel-enter-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* L'élément sortant part vers la gauche et devient invisible */
+.carousel-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
 }
