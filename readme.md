@@ -11,6 +11,8 @@ Créez un projet et téléchargez le projet.
 
 ## [2. Lancement](#title-two)
 
+Tout d'abord, assurez-vous de bien avoir installé [Node](https://nodejs.org/fr/download/package-manager).
+
 Une fois le projet téléchargé, ouvrez le terminal de votre éditeur de code
 et écrivez  
 
