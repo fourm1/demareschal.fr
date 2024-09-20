@@ -2,35 +2,37 @@
     <header class="header">
         <!-- Logo -->
         <div class="logo">
-            <img src="https://via.placeholder.com/150" alt="Logo" />
+            <img src="https://via.placeholder.com/150" alt="Logo"/>
         </div>
 
-        <!-- Menu principal -->
         <nav class="nav">
             <ul>
-                <!-- Bouton Modules avec menu déroulant -->
-                <li class="nav-item dropdown">
-                    <button @click="toggleModulesDropdown">Modules</button>
+                <li class="nav-item dropdown" @mouseover="showModulesDropdown = true"
+                    @mouseleave="showModulesDropdown = false">
+                    <button>Modules</button>
                     <ul v-if="showModulesDropdown" class="dropdown-menu">
                         <li v-for="module in modules" :key="module">{{ module }}</li>
                     </ul>
                 </li>
-                <li class="nav-item"><button>Contact</button></li>
-                <li class="nav-item"><button>À propos</button></li>
+                <li class="nav-item">
+                    <button>Contact</button>
+                </li>
+                <li class="nav-item">
+                    <button>À propos</button>
+                </li>
             </ul>
         </nav>
 
-        <!-- Droite du header : utilisateur connecté ou non -->
         <div class="user-section">
-            <!-- Version connectée -->
             <div v-if="isLoggedIn" class="user-dropdown">
                 <button @click="toggleUserDropdown">{{ username }}</button>
                 <ul v-if="showUserDropdown" class="dropdown-menu">
-                    <li><button @click="logout">Déconnexion</button></li>
+                    <li>
+                        <button @click="logout">Déconnexion</button>
+                    </li>
                 </ul>
             </div>
 
-            <!-- Version non connectée -->
             <div v-else>
                 <button @click="register">S'inscrire</button>
                 <button @click="login">Se connecter</button>
@@ -41,7 +43,7 @@
 
 <script>
 
-import ('@/assets/styles/header.scss')
+import '@/assets/styles/header.scss';
 
 export default {
     props: {
@@ -80,15 +82,11 @@ export default {
             alert("Déconnexion réussie !");
         },
         register() {
-            // Logique d'inscription
             alert("Redirection vers la page d'inscription");
         },
         login() {
-            // Logique de connexion
             alert("Redirection vers la page de connexion");
         },
     },
 };
 </script>
-
-<style scoped src="@/assets/styles/header.scss"></style>
