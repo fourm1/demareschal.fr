@@ -1,8 +1,7 @@
 <template>
     <header class="header">
-        <!-- Logo -->
         <div class="logo">
-            <img src="https://via.placeholder.com/150" alt="Logo"/>
+            <img src="@/assets/logo-a.png" alt="Logo"/>
         </div>
 
         <nav class="nav">
@@ -30,19 +29,18 @@
                     <li>
                         <button @click="logout">Déconnexion</button>
                     </li>
-                </ul>
+                    </ul>
             </div>
 
             <div v-else>
-                <button @click="register">S'inscrire</button>
-                <button @click="login">Se connecter</button>
+                <button id="register" @click="register">S'inscrire</button>
+                <button id="login" @click="login">Se connecter</button>
             </div>
         </div>
     </header>
 </template>
 
 <script>
-
 import '@/assets/styles/header.scss';
 
 export default {
@@ -71,14 +69,10 @@ export default {
         };
     },
     methods: {
-        toggleModulesDropdown() {
-            this.showModulesDropdown = !this.showModulesDropdown;
-        },
         toggleUserDropdown() {
             this.showUserDropdown = !this.showUserDropdown;
         },
         logout() {
-            // Logique de déconnexion
             alert("Déconnexion réussie !");
         },
         register() {
