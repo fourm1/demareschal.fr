@@ -36,26 +36,42 @@
     font-weight: bold;
     color: #3498db;
     white-space: nowrap;
-    /* Ajout de transition sur transform et opacity */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Sortie de l'élément avec un effet de glissement vers la gauche et disparition */
 .carousel-leave-active {
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.3s ease-out, transform 0.3s ease;
 }
 
-/* Entrée de l'élément avec un effet de glissement de la droite avec opacité augmentant */
 .carousel-enter-active {
     opacity: 0;
     transform: translateX(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* L'élément sortant part vers la gauche et devient invisible */
 .carousel-leave-to {
     opacity: 0;
     transform: translateX(-100%);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #333;
 }
