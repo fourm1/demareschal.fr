@@ -4,10 +4,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
     background-color: $background-color;
     font-family: Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.first-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.second-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
 }
 
 .header h1 {
@@ -23,9 +43,12 @@
 }
 
 .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     overflow: hidden;
-    width: 200px;
+    width: 100%;
     text-align: center;
     height: 2rem;
 }
@@ -74,4 +97,29 @@
 .profile p {
     font-size: 1rem;
     color: #333;
+}
+
+.first-page .scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.presentation {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.presentation h2 {
+    margin: 3% 0 2% 0;
+}
+
+.presentation p {
+    margin-bottom: 2%;
+    text-align: left;
 }
