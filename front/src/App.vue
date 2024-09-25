@@ -1,25 +1,38 @@
 <template>
+    <div id="app">
         <Home/>
+        <HeaderComponent :is-logged-in="isLoggedIn" :username="username" />
+    </div>
+
 </template>
 
 <script>
+
 import Home from "@/components/HomePage.vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
-        name: 'App',
-        components: {
-                Home
-        }
-}
+    name: 'App',
+    components: {
+        Home,
+        HeaderComponent
+    },
+    data() {
+        return {
+            isLoggedIn: false,
+            // username: 'Antoine'
+        };
+    },
+};
 </script>
 
 <style>
 #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
 }
 </style>
