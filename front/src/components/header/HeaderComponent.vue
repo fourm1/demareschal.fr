@@ -1,7 +1,7 @@
 <template>
     <header class="header-header">
         <div class="logo">
-            <img src="@/assets/images/logo-a.png" alt="Logo"/>
+            <img src="../../assets/images/logo-a.png" alt="Logo"/>
         </div>
 
         <nav class="nav">
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import '@/assets/styles/header.scss';
+import '@/components/header/header.scss';
 
 export default {
     props: {

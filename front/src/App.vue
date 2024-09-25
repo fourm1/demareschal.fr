@@ -8,8 +8,8 @@
 
 <script>
 
-import Home from "@/components/HomePage.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
+import Home from "@/components/homepage/HomePage.vue";
+import HeaderComponent from "@/components/header/HeaderComponent.vue";
 
 export default {
     name: 'App',

@@ -24,7 +24,7 @@
             </div>
 
             <div class="cv">
-                <a href="@/assets/downloadable/jetbrains-toolbox-2.2.2.20062.exe" download class="cv-button">
+                <a href="../../assets/downloadable/jetbrains-toolbox-2.2.2.20062.exe" download class="cv-button">
                     Télécharger mon cv
                 </a>
             </div>
@@ -45,7 +45,7 @@
 
 <script>
 
-import('@/assets/styles/home.scss')
+import('@/components/homepage/homepage.scss')
 
 export default {
     data() {

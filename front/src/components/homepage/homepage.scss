@@ -1,4 +1,4 @@
-@import "global";
+@import "../../assets/styles/global";
 
 .home {
     display: flex;
@@ -34,7 +34,7 @@
 }
 
 .second-page {
-    height: 100vh;
+    height: 87vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
