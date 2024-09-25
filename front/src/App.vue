@@ -8,7 +8,7 @@
 
 <script>
 
-import Home from "@/components/homepage/HomePage.vue";
+import Home from "@/components/homepage/HomePageComponent.vue";
 import HeaderComponent from "@/components/header/HeaderComponent.vue";
 
 export default {
