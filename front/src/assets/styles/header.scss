@@ -1,17 +1,21 @@
 @import "global";
 
-.header {
+.header-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: $background-color;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    width: 50px;
+    max-width: 50px;
     height: auto;
+    display: block;
 }
 
 .nav ul {

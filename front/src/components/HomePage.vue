@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <section class="first-page">
-            <header class="header">
+            <header class="header-home">
                 <h1>Antoine de Mareschal</h1>
                 <h2>Développeur full-stack junior</h2>
             </header>

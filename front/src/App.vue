@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <Home/>
         <HeaderComponent :is-logged-in="isLoggedIn" :username="username" />
+        <Home/>
     </div>
 
 </template>
@@ -19,8 +19,8 @@ export default {
     },
     data() {
         return {
-            isLoggedIn: false,
-            // username: 'Antoine'
+            isLoggedIn: true,
+            username: 'Antoine'
         };
     },
 };

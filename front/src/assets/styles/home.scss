@@ -8,9 +8,19 @@
     min-height: 100vh;
     background-color: $background-color;
     font-family: Arial, sans-serif;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
+}
+
+.header-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $background-color;
+    border-bottom: 1px solid #ddd;
 }
 
 .first-page {
@@ -20,6 +30,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    top: -80px;
 }
 
 .second-page {
@@ -30,12 +41,12 @@
     justify-content: left;
 }
 
-.header h1 {
+.header-home h1 {
     font-size: 2.5rem;
     margin: 0;
 }
 
-.header h2 {
+.header-home h2 {
     font-size: 1.5rem;
     font-weight: 300;
     color: #555;
