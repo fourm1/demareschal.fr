@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <Home/>
         <HeaderComponent :is-logged-in="isLoggedIn" :username="username" />
     </div>
 
@@ -7,11 +8,13 @@
 
 <script>
 
+import Home from "@/components/HomePage.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
     name: 'App',
     components: {
+        Home,
         HeaderComponent
     },
     data() {

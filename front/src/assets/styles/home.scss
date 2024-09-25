@@ -1,0 +1,181 @@
+@import "global";
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: $background-color;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.first-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.second-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    height: 2rem;
+}
+
+.carousel-item {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    white-space: nowrap;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-leave-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-out, transform 0.3s ease;
+}
+
+.carousel-enter-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.first-page .scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.presentation {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.presentation h2 {
+    margin: 3% 0 2% 0;
+}
+
+.presentation p {
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.cv-button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary-color;
+    background-color: #fff;
+    border: 2px solid $primary-color;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    margin: 20px 0;
+}
+
+.cv-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6b6b;
+    transition: transform 0.4s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -1;
+}
+
+.cv-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.cv-button:hover {
+    background-color: $primary-color;
+    color: #fff;
+}
+
+.cv-download-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.techno-section {
+    margin-bottom: 40px;
+}
+
+.arrow-down {
+    margin-top: 40px;
+}
