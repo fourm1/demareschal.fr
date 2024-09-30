@@ -2,18 +2,21 @@
     <div id="app">
         <HeaderComponent :is-logged-in="isLoggedIn" :username="username" />
         <Home/>
+        <FooterComponent />
     </div>
 
 </template>
 
 <script>
 
-import Home from "@/components/homepage/HomePage.vue";
+import Home from "@/components/homepage/HomePageComponent.vue";
 import HeaderComponent from "@/components/header/HeaderComponent.vue";
+import FooterComponent from "@/components/footer/FooterComponent.vue";
 
 export default {
     name: 'App',
     components: {
+        FooterComponent,
         Home,
         HeaderComponent
     },
