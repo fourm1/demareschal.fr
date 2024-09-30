@@ -18,12 +18,16 @@
                     <font-awesome-icon :icon="['fab', 'steam']" />
                 </a>
             </div>
+            <div class="footer-links">
+                <a>Politique de confidentialité</a>
+                <a>Mentions légales</a>
+                <a>Plan du site</a>
+            </div>
         </div>
     </footer>
 </template>
 
 <script setup>
-
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-
+import '@/components/footer/footer.scss'
 </script>
