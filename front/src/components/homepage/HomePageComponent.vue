@@ -45,7 +45,7 @@
 
 <script>
 
-import('@/components/homepage/homepage.scss')
+import('@/components/homepage/homePage.scss')
 
 export default {
     data() {
