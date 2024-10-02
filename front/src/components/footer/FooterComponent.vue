@@ -2,20 +2,25 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <font-awesome-icon :icon="['fab', 'facebook']" />
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" >
+                    <Icon icon="mdi:facebook" class="default-icon" />
+                    <Icon icon="devicon:facebook" class="hover-icon" />
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <font-awesome-icon :icon="['fab', 'instagram']" />
+                    <Icon icon="mdi:instagram" class="default-icon" />
+                    <Icon icon="skill-icons:instagram" class="hover-icon" />
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <font-awesome-icon :icon="['fab', 'linkedin']" />
+                    <Icon icon="mdi:linkedin" class="default-icon" />
+                    <Icon icon="skill-icons:linkedin" class="hover-icon" />
                 </a>
                 <a href="https://github.com/fourm1" target="_blank" rel="noopener noreferrer">
-                    <font-awesome-icon :icon="['fab', 'github']" />
+                    <Icon icon="mdi:github" class="default-icon" />
+                    <Icon icon="skill-icons:github-light" class="hover-icon" />
                 </a>
-                <a href="https://steamcommunity.com/id/fourm1ssou" target="_blank" rel="noopener noreferrer">
-                    <font-awesome-icon :icon="['fab', 'steam']" />
+                <a href="https://steamcommunity.com/id/fourm1ssou" target="_blank" rel="noopener noreferrer" >
+                    <Icon icon="mdi:steam" class="default-icon" />
+                    <Icon icon="mdi:steam" class="hover-icon steam-icon" />
                 </a>
             </div>
             <div class="footer-links">
@@ -28,6 +33,6 @@
 </template>
 
 <script setup>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import '@/components/footer/footer.scss'
+import { Icon } from '@iconify/vue';
+import '@/components/footer/footer.scss';
 </script>

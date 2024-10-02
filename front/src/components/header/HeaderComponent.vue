@@ -1,7 +1,9 @@
 <template>
     <header class="header-header">
         <div class="logo">
-            <img src="../../assets/images/logo-a.png" alt="Logo"/>
+            <router-link to="/">
+                <img src="../../assets/images/logo-a.png" alt="Logo"/>
+            </router-link>
         </div>
 
         <nav class="nav">
@@ -11,7 +13,10 @@
                     <button>Modules</button>
                     <ul v-if="showModulesDropdown" class="dropdown-menu">
                         <li v-for="module in modules" :key="module">
-                            <router-link v-if="module === 'Convertisseur de devises'" to="/currency-converter">{{ module }}</router-link>
+                            <router-link v-if="module === 'Convertisseur de devises'" to="/currency-converter">{{
+                                    module
+                                }}
+                            </router-link>
                             <span v-else>{{ module }}</span>
                         </li>
                     </ul>
