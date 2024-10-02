@@ -20,7 +20,7 @@
                 </a>
                 <a href="https://steamcommunity.com/id/fourm1ssou" target="_blank" rel="noopener noreferrer" >
                     <Icon icon="mdi:steam" class="default-icon" />
-                    <Icon icon="mdi:steam" class="hover-icon steam-icon" />
+                    <Icon icon="la:steam" class="hover-icon steam-icon" />
                 </a>
             </div>
             <div class="footer-links">

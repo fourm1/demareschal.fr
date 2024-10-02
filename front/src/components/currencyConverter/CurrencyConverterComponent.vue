@@ -1,17 +1,17 @@
 <template>
-    <div>
+    <div class="currency-converter">
         <h1>Convertisseur de Devises</h1>
         <table>
             <tr>
                 <td>
-                    <select v-model="currencyFrom">
+                    <select v-model="currencyFrom" class="currency-converter__select">
                         <option v-for="currency in currencies" :key="currency" :value="currency">
                             {{ currency }}
                         </option>
                     </select>
                 </td>
                 <td>
-                    <select v-model="currencyTo">
+                    <select v-model="currencyTo" class="currency-converter__select">
                         <option v-for="currency in currencies" :key="currency" :value="currency">
                             {{ currency }}
                         </option>
@@ -20,17 +20,17 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="number" v-model="amount" placeholder="Montant à convertir" />
+                    <input type="number" v-model="amount" placeholder="Montant à convertir" class="currency-converter__input" />
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button @click="convertCurrency">Convertir</button>
+                    <button @click="convertCurrency" class="currency-converter__button">Convertir</button>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <p>Résultat: {{ result }}</p>
+                    <p class="currency-converter__button">Résultat: {{ result }}</p>
                 </td>
             </tr>
         </table>
@@ -38,6 +38,9 @@
 </template>
 
 <script>
+
+import '@/components/currencyConverter/currencyConverter.scss'
+
 export default {
     data() {
         return {
@@ -58,27 +61,5 @@ export default {
 </script>
 
 <style scoped>
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-select, input {
-    width: 100%;
-    padding: 5px;
-}
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #45a049;
-}
+
 </style>
