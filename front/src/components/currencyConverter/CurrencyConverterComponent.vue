@@ -30,7 +30,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <p class="currency-converter__button">Résultat: {{ result }}</p>
+                    <p class="currency-converter__button">Résultat : {{ result }}</p>
                 </td>
             </tr>
         </table>
@@ -48,13 +48,31 @@ export default {
             currencyFrom: 'USD',
             currencyTo: 'EUR',
             amount: 0,
-            result: null
+            result: null,
+            exchangeRates: {}
         };
     },
     methods: {
+        async fetchExchangeRates() {
+            try {
+                const response = await fetch('https://api.coupa.com/api/exchange_rates');
+                const data = await response.json();
+                this.exchangeRates = data.exchangeRates;
+            } catch (error) {
+                console.error('Erreur lors de la récupération des taux de change : ', error);
+            }
+        },
         convertCurrency() {
-            // Logique de conversion à implémenter
-            this.result = this.amount * 1.2; // Exemple de conversion fictive
+            const rateFrom = this.exchangeRates[this.currencyFrom];
+            const rateTo = this.exchangeRates[this.currencyTo];
+            if (rateFrom && rateTo) {
+                this.result = (this.amount / rateFrom) * rateTo;
+            } else {
+                this.result = 'taux de change non disponible';
+            }
+        },
+        created() {
+            this.fetchExchangeRates();
         }
     }
 };
