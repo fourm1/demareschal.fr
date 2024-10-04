@@ -38,30 +38,25 @@
 </template>
 
 <script>
-
 import '@/components/currencyConverter/currencyConverter.scss'
 
 export default {
     data() {
         return {
             currencies: ['USD', 'EUR', 'GBP', 'JPY'],
-            currencyFrom: 'USD',
-            currencyTo: 'EUR',
+            currencyFrom: 'EUR',
+            currencyTo: 'USD',
             amount: 0,
             result: null,
-            exchangeRates: {}
+            exchangeRates: {
+                USD: 1.1029,
+                EUR: 1,
+                GBP: 0.83735,
+                JPY: 161.69
+            }
         };
     },
     methods: {
-        async fetchExchangeRates() {
-            try {
-                const response = await fetch('https://api.coupa.com/api/exchange_rates');
-                const data = await response.json();
-                this.exchangeRates = data.exchangeRates;
-            } catch (error) {
-                console.error('Erreur lors de la récupération des taux de change : ', error);
-            }
-        },
         convertCurrency() {
             const rateFrom = this.exchangeRates[this.currencyFrom];
             const rateTo = this.exchangeRates[this.currencyTo];
@@ -70,14 +65,10 @@ export default {
             } else {
                 this.result = 'taux de change non disponible';
             }
-        },
-        created() {
-            this.fetchExchangeRates();
         }
     }
 };
 </script>
 
 <style scoped>
-
 </style>
