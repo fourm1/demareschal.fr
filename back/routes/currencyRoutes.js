@@ -1,5 +1,5 @@
 const express = require('express');
-const {fetchCurrencies} = require('./service/currencyConverter/currencyService');
+const {fetchCurrencies} = require('../service/currencyConverter/currencyService');
 const router = express.Router();
 
 router.get('/api/currencies', async (req, res) => {
