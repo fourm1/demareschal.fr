@@ -1,7 +1,5 @@
 # Comment démarrer l'application
 
-### ⚠️ L'application ne possédant pas encore de back, il n'est évidemment possible de lancer que le front.
-
 ## [1. Téléchargement](#title-one)
 
 En premier lieu, commencez par ouvrir un éditeur 
@@ -11,27 +9,5 @@ Créez un projet et téléchargez le projet.
 
 ## [2. Lancement](#title-two)
 
-Tout d'abord, assurez-vous de bien avoir installé [Node](https://nodejs.org/fr/download/package-manager).
-La version minimale requise est la 14, mais la 20.17.0 (LTS) est conseillée.
-
-Une fois le projet téléchargé, ouvrez le terminal de votre éditeur de code
-et écrivez  
-
-```cd front```
-
-qui vous enverra dans le dossier du front.
-
-<br />
-Ceci fait, écrivez
-
-```npm install```
-
-qui téléchargera toutes les dépendances liées au projet sur votre machine.
-
-<br />
-Cette étape terminée, vous pouvez donc lancer le front du projet en écrivant
-
-```npm run serve```.
-
-Rendez-vous, comme vous l'indiquera votre terminal, à cette [adresse](http://localhost:8080).  
-Votre navigateur par défaut, dans la majorité des cas, ouvrira d'ailleurs de lui-même la page.
+Rendez-vous dans la branche 'dev'. Aucune fonctionnalité déjà développée n'est disponible ici.  
+Un readme plus précis vous expliquera comment lancer le projet.
