@@ -27,6 +27,7 @@
                 <a>Politique de confidentialité</a>
                 <a>Mentions légales</a>
                 <a>Plan du site</a>
+                <router-link to="/api-endpoints">API Endpoints</router-link>
             </div>
         </div>
     </footer>

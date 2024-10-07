@@ -3,7 +3,7 @@ const {fetchCurrencies} = require("./service/currencyConverter/currencyService")
 const app = express();
 const port = 3000;
 
-app.get('/site-map', (req, res) => {
+app.get('/api/site-map', (req, res) => {
     res.send("Hello World !");
 });
 
