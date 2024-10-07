@@ -75,18 +75,6 @@ export default {
             } else {
                 this.result = 'Taux de change non disponible';
             }
-        },
-        getCurrencySymbol(currency) {
-            const symbols = {
-                USD: 'US $',
-                EUR: '€',
-                JPY: '¥',
-                BGN: '',
-                CZK: '',
-                DKK: '',
-                GBP: '£',
-            };
-            return symbols[currency] || '';
         }
     },
     mounted() {
