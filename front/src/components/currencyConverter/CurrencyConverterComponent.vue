@@ -1,6 +1,6 @@
 <template>
     <div class="currency-converter">
-        <h1>Convertisseur de Devises</h1>
+        <h1>Convertisseur de devises</h1>
         <table>
             <tr>
                 <td>
@@ -38,37 +38,60 @@
 </template>
 
 <script>
-import '@/components/currencyConverter/currencyConverter.scss'
+import axios from 'axios';
+import '@/components/currencyConverter/currencyConverter.scss';
 
 export default {
     data() {
         return {
-            currencies: ['USD', 'EUR', 'GBP', 'JPY'],
+            currencies: [],
             currencyFrom: 'EUR',
             currencyTo: 'USD',
             amount: 0,
             result: null,
-            exchangeRates: {
-                USD: 1.1029,
-                EUR: 1,
-                GBP: 0.83735,
-                JPY: 161.69
-            }
+            exchangeRates: {},
         };
     },
     methods: {
+        async fetchCurrencies() {
+            try {
+                const response = await axios.get('/api/currencies');
+                const devises = response.data;
+
+                // Mise à jour des devises et des taux de change
+                this.currencies = devises.map(devise => devise.codeISODevise);
+                devises.forEach(devise => {
+                    this.exchangeRates[devise.codeISODevise] = devise.taux;
+                });
+            } catch (error) {
+                console.error("Erreur lors de la récupération des devises:", error);
+            }
+        },
         convertCurrency() {
             const rateFrom = this.exchangeRates[this.currencyFrom];
             const rateTo = this.exchangeRates[this.currencyTo];
             if (rateFrom && rateTo) {
-                this.result = (this.amount / rateFrom) * rateTo;
+                this.result = ((this.amount / rateFrom) * rateTo).toFixed(2);
             } else {
-                this.result = 'taux de change non disponible';
+                this.result = 'Taux de change non disponible';
             }
+        },
+        getCurrencySymbol(currency) {
+            const symbols = {
+                USD: 'US $',
+                EUR: '€',
+                JPY: '¥',
+                BGN: '',
+                CZK: '',
+                DKK: '',
+                GBP: '£',
+            };
+            return symbols[currency] || '';
         }
-    }
+    },
+    mounted() {
+        // Appel initial pour récupérer les devises dès le montage du composant
+        this.fetchCurrencies();
+    },
 };
 </script>
-
-<style scoped>
-</style>
