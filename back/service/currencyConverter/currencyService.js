@@ -21,5 +21,4 @@ async function fetchCurrencies() {
     }
 }
 
-
 module.exports = { fetchCurrencies };
