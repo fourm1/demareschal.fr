@@ -30,7 +30,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <p class="currency-converter__button">Résultat : {{ result }}</p>
+                    <p class="currency-converter__result">Résultat : {{ result }} {{ getCurrencySymbol(currencyTo) }}</p>
                 </td>
             </tr>
         </table>
@@ -48,7 +48,7 @@ export default {
             currencyFrom: 'EUR',
             currencyTo: 'USD',
             amount: 0,
-            result: null,
+            result: 0,
             exchangeRates: {},
         };
     },
@@ -71,10 +71,46 @@ export default {
             const rateFrom = this.exchangeRates[this.currencyFrom];
             const rateTo = this.exchangeRates[this.currencyTo];
             if (rateFrom && rateTo) {
-                this.result = ((this.amount / rateFrom) * rateTo).toFixed(2);
+                this.result = ((this.amount / rateFrom) * rateTo).toFixed(2).replace('.', ',');
             } else {
                 this.result = 'Taux de change non disponible';
             }
+        },
+        getCurrencySymbol(currency) {
+            const symbols = {
+                USD: '$',
+                EUR: '€',
+                JPY: '¥',
+                BGN: 'лв',
+                CZK: 'Kč',
+                DKK: 'kr',
+                GBP: '£',
+                HUF: 'Ft',
+                PLN: 'zł',
+                RON: 'lei',
+                SEK: 'kr',
+                CHF: 'CHF',
+                ISK: 'kr',
+                NOK: 'kr',
+                TRY: '₺',
+                AUD: '$',
+                BRL: 'R$',
+                CAD: '$',
+                CNY: '¥',
+                HKD: '$',
+                IDR: 'Rp',
+                ILS: '₪',
+                INR: '₹',
+                KRW: '₩',
+                MXN: '$',
+                MYR: 'RM',
+                NZD: '$',
+                PHP: '₱',
+                SGD: '$',
+                THB: '฿',
+                ZAR: 'R'
+            };
+            return symbols[currency] || '';
         }
     },
     mounted() {
