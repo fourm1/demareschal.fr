@@ -61,15 +61,28 @@
     margin-bottom: 5px;
     padding: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .dropdown-menu li:last-child {
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 .dropdown-menu li:hover {
     background-color: $primary-color;
     color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-menu li a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-item:hover .dropdown-menu,

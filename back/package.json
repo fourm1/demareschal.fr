@@ -11,6 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.0"
+    "axios": "^1.7.7",
+    "express": "^4.21.0",
+    "vue-router": "^4.4.5"
   }
 }

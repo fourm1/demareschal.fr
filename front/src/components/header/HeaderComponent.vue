@@ -1,7 +1,9 @@
 <template>
     <header class="header-header">
         <div class="logo">
-            <img src="../../assets/images/logo-a.png" alt="Logo"/>
+            <router-link to="/">
+                <img src="../../assets/images/logo-a.png" alt="Logo"/>
+            </router-link>
         </div>
 
         <nav class="nav">
@@ -10,7 +12,13 @@
                     @mouseleave="showModulesDropdown = false">
                     <button>Modules</button>
                     <ul v-if="showModulesDropdown" class="dropdown-menu">
-                        <li v-for="module in modules" :key="module">{{ module }}</li>
+                        <li v-for="module in modules" :key="module">
+                            <router-link v-if="module === 'Convertisseur de devises'" to="/currency-converter">{{
+                                    module
+                                }}
+                            </router-link>
+                            <span v-else>{{ module }}</span>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -29,7 +37,7 @@
                     <li>
                         <button @click="logout">Déconnexion</button>
                     </li>
-                    </ul>
+                </ul>
             </div>
 
             <div v-else>
