@@ -76,4 +76,8 @@ Vous pouvez maintenant sélectionner 'Apply', en bas à droite de la pop-up !
 
 Pour le back, c'est légèrement différent. Sélectionnez également le petit '+', mais cette fois vous allez sélectionner 'Node.js'.  
 Une fois cela effectué, cliquez sur 'File loader'. Cliquez sur le fichier 'server.js' situé dans le dossier 'back'.  
+
+Vous pouvez retrouver vos configurations enregistrées à l'endroit où vous avez trouvé l'onglet 'Add configuration'.  
+Vous pouvez changer de configuration en cliquant sur la petite flèche à droite.
+
 Vous pouvez maintenant lancer l'application en deux clics !
