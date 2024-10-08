@@ -35,7 +35,7 @@ export default {
                 const url = URL.createObjectURL(blob);
                 window.open(url, '_blank');
             } catch (error) {
-                endpoint.result = `Error: ${error.message}`;
+                        endpoint.result = `Error: ${error.message}`;
             }
         }
     },
