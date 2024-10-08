@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
         <h1>API Endpoints</h1>
         <ul>
             <li v-for="endpoint in endpoints" :key="endpoint.url">
