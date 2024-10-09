@@ -1,6 +1,7 @@
 import HomePage from "@/components/homepage/HomePageComponent.vue";
 import currencyConverter from "@/components/currencyConverter/CurrencyConverterComponent.vue";
 import {createRouter, createWebHistory} from "vue-router";
+import EndpointsShowComponent from "@/components/endpointsShow/EndpointsShowComponent.vue";
 
 const routes = [
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/currency-converter',
         name: 'CurrencyConverter',
         component: currencyConverter
+    },
+    {
+        path: '/api-endpoints',
+        name: 'EndpointsShow',
+        component: EndpointsShowComponent
     }
 ];
 

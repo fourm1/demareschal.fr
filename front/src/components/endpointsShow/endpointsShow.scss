@@ -1,0 +1,38 @@
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.all-api {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.page > li {
+    margin-bottom: 20px;
+}
+
+.all-api > li > button {
+    margin-top: 20px;
+}
+
+.all-api > li:last-child  {
+    margin-left: 50px;
+}
+
+pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.page {
+    height: 63.2vh;
+    margin-top: 20px;
+}
