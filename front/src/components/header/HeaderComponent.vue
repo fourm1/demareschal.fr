@@ -22,7 +22,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <button>Contact</button>
+                    <router-link to="/contact" class="contact-button">Contact</router-link>
                 </li>
                 <li class="nav-item">
                     <button>À propos</button>
@@ -88,7 +88,7 @@ export default {
         },
         login() {
             alert("Redirection vers la page de connexion");
-        },
+        }
     },
 };
 </script>
